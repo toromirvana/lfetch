@@ -1,0 +1,23 @@
+#!/bin/sh
+
+logo='         .--.
+        |o_o |
+        |:_/ |
+       //   \ \
+      (|     | )
+     /`\_   _/`\
+     \___)=(___/'
+
+. /etc/os-release
+kernel=$(uname -r)
+uptime_sec=$(awk '{print int($1)}' /proc/uptime)
+hours=$((uptime_sec / 3600))
+minutes=$(( (uptime_sec % 3600) / 60 ))
+
+printf "%s\n" "$logo"
+echo "--------------------------"
+echo "os	$NAME"
+echo "kernel 	$kernel"
+echo "uptime 	${hours}h ${mins}m"
+printf "memory  "
+busybox free -h | awk '/Mem:/ {print $3 " used / " $2 " total"}'
