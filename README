@@ -3,6 +3,7 @@ it uses busybox free -h instead of the default free -h, you can change that in t
 "busybox free -h" with "free -h"
 
 ```bash
+
 git clone https://github.com/toromirvana/lfetch.git
 cd lfetch
 sudo make install || doas make install
