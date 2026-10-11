@@ -1,3 +1,3 @@
 just a simple,light fetch program,i guess.
-also it uses busybox free -h instead of the default free -h, you can change that in the "lfetch" file pretty simply by replacing:
+it uses busybox free -h instead of the default free -h, you can change that in the "lfetch" file pretty simply by replacing:
 "busybox free -h" with "free -h"
